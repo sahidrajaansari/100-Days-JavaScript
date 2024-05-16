@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex w-[100vw] min-h-[100vh] bg-color1 justify-center items-center">
+      <div class="my-10 w-[80vw] flex flex-col bg-color4 rounded-xl overflow-y-auto">
+        <div class="flex flex-col my-10 overflow-y-auto">
+          <div class="flex justify-around mb-5">
+            <div class="flex flex-col items-center">
+              <label for="Slider" class="mb-2 font-bold text-color5"
+                >Grid Width</label
+              >
+              <div class="flex items-center">
+                <input
+                  type="range"
+                  min="1"
+                  max="40"
+                  id="width-slider"
+                  class="w-full"
+                  style="
+                    --webkit-appearance: none;
+                    height: 2px;
+                    background-color: #d1d5db;
+                    initial-value: 0;
+                    outline: none;
+                  "
+                />
+                <span class="pl-3 text-color5" id="width-value">1</span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center">
+              <label for="Slider" class="mb-2 font-bold text-color5"
+                >Grid Height</label
+              >
+              <div class="flex items-center">
+                <input
+                  type="range"
+                  min="1"
+                  max="40"
+                  id="height-slider"
+                  class="w-full"
+                  style="
+                    --webkit-appearance: none;
+                    height: 2px;
+                    background-color: #d1d5db;
+                    outline: none;
+                  "
+                />
+                <span class="pl-3 text-color5" id="height-value">1</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row justify-around items-center">
+            <button
+              class="bg-color3 p-2 rounded-md cursor-pointer text-color5"
+              id="create-grid-btn"
+            >
+              Create Grid
+            </button>
+            <button class="bg-color3 p-2 rounded-md cursor-pointer text-color5"
+            id="erase-grid-btn">
+              Clear Grid
+            </button>
+            <input class="rounded-md cursor-pointer bg-inherit" type="color" id="color-picker-btn" name="favcolor" value="#ff0000"> 
+            <button class="bg-red-700 p-2 rounded-md cursor-pointer text-color5" id="erase-btn">
+              Erase
+            </button>
+            <button class=" bg-red-700 p-2 rounded-md cursor-pointer text-color5" id="paint-btn">
+              Paint
+            </button>
+          </div>
+        <div class="flex justify-center items-center my-5">
+          <div class="grid output-container" style="grid-template-columns: repeat(40, 1fr);">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="scripts.js"></script>
+</html>
